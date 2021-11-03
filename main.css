@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+    /* MENNUU----SETTIGGS      */
+
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    line-height: 70px;
+}
+.logo{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    float: left;
+    margin-left: 80px;
+}
+
+.imagen-logo{
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    left: 0;
+}
+
+.texto-cabezera{
+    position: fixed;
+    left: 80px;
+}
+
+
+ul{
+    display: flex;
+    float: right;
+    margin-right: 80px;
+}
+ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+ul li a:active,
+ul li a:hover{
+    color: crimson;
+}
+.bar-btn{
+    color: #fff;
+    font-size: 25px;
+    display: none;
+}
+#bar{
+    display: none;
+}
+.home{
+    background: url(./banner.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+@media (max-width : 930px) {
+    .logo{
+        margin-left: 40px;
+        font-size: 25px;
+    }
+    ul{
+        margin-right: 40px;
+    }
+    ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width : 850px) {
+    ul{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        background-color: #222;
+        text-align: center;
+        padding: 0;
+        display: block;
+        transition: all 0.8s;
+    }
+    .bar-btn{
+        display: block;
+        float: right;
+        margin-right: 40px;
+    }
+    ul li{
+        margin: 20px 0;
+    }
+    ul li a{
+        font-size: 22px;
+    }
+    #bar:checked ~ ul{
+        left: 0;
+    }
+}
